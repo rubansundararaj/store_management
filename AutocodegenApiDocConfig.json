@@ -1,0 +1,740 @@
+
+
+
+{
+    "autocodegen": "1.0",
+    "info": {
+        "title": "store_management",
+        "description": "This is a simple example NodeJS API project to demonstrate AutoCodeGen Documentation",
+        "version": "1.0.0",
+        "contact": {
+            "email": "abc@autocodegen.com"
+        }
+    },
+    "schemes": ["http"],
+    "host": "http://localhost:8080",
+    "baseRoute": "/",
+     "routes" : [
+             {
+        "routeName" : "/items_info/post_items_info_data",
+        "method" : "post",    
+        "description": "post_items_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_item_id" : "<String>"           
+     ,
+          "schema" : "<Number>"           
+     ,
+          "sku" : "<String>"           
+     ,
+          "name" : "<String>"           
+     ,
+          "price" : "<Number>"           
+     ,
+          "description" : "<String>"           
+     ,
+          "sold_at" : "<String>"           
+     ,
+          "tot_rating" : "<Number>"           
+     ,
+          "num_rating" : "<Number>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/items_info/get_one_items_info_data",
+        "method" : "get",    
+        "description": "get_one_items_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_item_id" : "req.query.unique_item_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_item_id" : "<String>",                      "schema" : "<Number>",                      "sku" : "<String>",                      "name" : "<String>",                      "price" : "<Number>",                      "description" : "<String>",                      "sold_at" : "<String>",                      "tot_rating" : "<Number>",                      "num_rating" : "<Number>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/items_info/get_all_items_info_data",
+        "method" : "get",    
+        "description": "get_all_items_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_item_id" : "<String>",                      "schema" : "<Number>",                      "sku" : "<String>",                      "name" : "<String>",                      "price" : "<Number>",                      "description" : "<String>",                      "sold_at" : "<String>",                      "tot_rating" : "<Number>",                      "num_rating" : "<Number>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/items_info/update_one_items_info_data",
+        "method" : "patch",    
+        "description": "items_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "schema" :  "<Number>",                "sku" :  "<String>",                "name" :  "<String>",                "price" :  "<Number>",                "description" :  "<String>",                "sold_at" :  "<String>",                "tot_rating" :  "<Number>",                "num_rating" :  "<Number>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/items_info/delete_one_items_info_data",
+        "method" : "delete",    
+        "description": "delete_one_items_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+               ,
+
+                 {
+        "routeName" : "/stores_info/post_stores_info_data",
+        "method" : "post",    
+        "description": "post_stores_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_store_id" : "<String>"           
+     ,
+          "schema" : "<Number>"           
+     ,
+          "name" : "<String>"           
+     ,
+          "address" : "<{}>"           
+     ,
+          "items_in_stock" : "<[]>"           
+     ,
+          "staff" : "<[]>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/stores_info/get_one_stores_info_data",
+        "method" : "get",    
+        "description": "get_one_stores_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_store_id" : "req.query.unique_store_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_store_id" : "<String>",                      "schema" : "<Number>",                      "name" : "<String>",                      "address" : "<{}>",                      "items_in_stock" : "<[]>",                      "staff" : "<[]>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/stores_info/get_all_stores_info_data",
+        "method" : "get",    
+        "description": "get_all_stores_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_store_id" : "<String>",                      "schema" : "<Number>",                      "name" : "<String>",                      "address" : "<{}>",                      "items_in_stock" : "<[]>",                      "staff" : "<[]>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/stores_info/update_one_stores_info_data",
+        "method" : "patch",    
+        "description": "stores_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "schema" :  "<Number>",                "name" :  "<String>",                "address" :  "<{}>",                "items_in_stock" :  "<[]>",                "staff" :  "<[]>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/stores_info/delete_one_stores_info_data",
+        "method" : "delete",    
+        "description": "delete_one_stores_info_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+         
+
+
+     ]
+
+
+
+,
+ "customRoutes" : [
+             {
+        "routeName" : "/items_info/update_one_tot_rating_by_unique_item_id",
+        "method" : "patch",    
+        "description": "update_one_tot_rating_by_unique_item_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "tot_rating" : "tot_rating_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/items_info/update_one_name_by_unique_item_id",
+        "method" : "patch",    
+        "description": "update_one_name_by_unique_item_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "name" : "name_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/items_info/update_one_num_rating_by_unique_item_id",
+        "method" : "patch",    
+        "description": "update_one_num_rating_by_unique_item_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "num_rating" : "num_rating_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/items_info/update_one_price_by_unique_item_id",
+        "method" : "patch",    
+        "description": "update_one_price_by_unique_item_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "price" : "price_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/items_info/update_one_description_by_unique_item_id",
+        "method" : "patch",    
+        "description": "update_one_description_by_unique_item_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_item_id" : "req.query.unique_item_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "description" : "description_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+               {
+        "routeName" : "/stores_info/get_one_address_by_unique_store_id",
+        "method" : "get",    
+        "description": "get_one_address_by_unique_store_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "address" : "address_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+             {
+        "routeName" : "/stores_info/get_one_items_in_stock_by_unique_store_id",
+        "method" : "get",    
+        "description": "get_one_items_in_stock_by_unique_store_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "items_in_stock" : "items_in_stock_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+       ,{
+        "routeName" : "/stores_info/update_one_items_in_stock_by_unique_store_id",
+        "method" : "patch",    
+        "description": "update_one_items_in_stock_by_unique_store_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "items_in_stock" : "items_in_stock_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/stores_info/update_one_address_by_unique_store_id",
+        "method" : "patch",    
+        "description": "update_one_address_by_unique_store_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "address" : "address_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/stores_info/update_one_staff_by_unique_store_id",
+        "method" : "patch",    
+        "description": "update_one_staff_by_unique_store_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_store_id" : "req.query.unique_store_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "staff" : "staff_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+  
+ ]
+        
+ }
